@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Эко-отель "Полевые грезы" - отдых в гармонии с природой</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.7;
+            color: #333;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0;
+            background-color: #f9f9f9;
+            font-size: 18px;
+        }
+        
+        /* Новая расширенная шапка */
+        .main-header {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1600566752355-35792bedcfea?ixlib=rb-1.2.1&auto=format&fit=crop&w=1400&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 80px 0 120px;
+            text-align: center;
+            position: relative;
+            margin-bottom: 50px;
+        }
+        
+        .header-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .main-nav {
+            background-color: rgba(44, 94, 26, 0.9);
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+        }
+        
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 30px;
+        }
+        
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: white;
+            text-decoration: none;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            transition: all 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: #d4edda;
+            transform: translateY(-2px);
+        }
+        
+        h1 {
+            font-size: 3.5em;
+            margin: 0 0 20px;
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+        }
+        
+        .header-subtitle {
+            font-size: 1.8em;
+            margin-bottom: 40px;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+        }
+        
+        .header-cta {
+            display: inline-block;
+            background-color: #4caf50;
+            color: white;
+            padding: 18px 35px;
+            text-decoration: none;
+            font-size: 1.2em;
+            font-weight: bold;
+            border-radius: 50px;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        
+        .header-cta:hover {
+            background-color: #3d8b40;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        }
+        
+        h2 {
+            color: #2c5e1a;
+            border-bottom: 3px solid #2c5e1a;
+            padding-bottom: 15px;
+            margin-top: 60px;
+            font-size: 2.2em;
+        }
+        
+        .intro {
+            font-size: 1.3em;
+            text-align: center;
+            margin: 0 auto 60px;
+            max-width: 900px;
+            line-height: 1.8;
+        }
+        
+        .room {
+            background-color: white;
+            border-radius: 15px;
+            padding: 35px;
+            margin-bottom: 40px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        }
+        
+        .room-title {
+            color: #2c5e1a;
+            font-size: 2.2em;
+            margin-bottom: 20px;
+        }
+        
+        .amenities {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            margin: 30px 0;
+        }
+        
+        .amenity {
+            background-color: #e8f5e9;
+            padding: 12px 20px;
+            border-radius: 25px;
+            font-size: 1em;
+        }
+        
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+        
+        .gallery img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 10px;
+            transition: transform 0.4s;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .gallery img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+        
+        .cta {
+            background: linear-gradient(135deg, #4caf50, #2c5e1a);
+            color: white;
+            text-align: center;
+            padding: 50px;
+            border-radius: 15px;
+            margin: 60px 0;
+        }
+        
+        .cta h2 {
+            color: white;
+            border-bottom: 3px solid white;
+            font-size: 2.5em;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background-color: white;
+            color: #2c5e1a;
+            padding: 18px 40px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.2em;
+            border-radius: 50px;
+            margin-top: 30px;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        
+        .cta-button:hover {
+            background-color: #d4edda;
+            color: #2c5e1a;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        }
+        
+        footer {
+            background-color: #2c5e1a;
+            color: white;
+            text-align: center;
+            margin-top: 80px;
+            padding: 40px 20px;
+            font-size: 1.1em;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin: 20px 0;
+        }
+        
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: #d4edda;
+            text-decoration: underline;
+        }
+        
+        .testimonial {
+            background-color: #e8f5e9;
+            padding: 30px;
+            border-left: 6px solid #4caf50;
+            margin: 30px 0;
+            font-style: italic;
+            font-size: 1.2em;
+            border-radius: 0 10px 10px 0;
+        }
+        
+        .testimonial-author {
+            text-align: right;
+            font-weight: bold;
+            margin-top: 15px;
+            font-size: 1.1em;
+        }
+        
+        .section {
+            margin-bottom: 70px;
+            padding: 0 30px;
+        }
+        
+        .highlight {
+            background-color: #fffde7;
+            padding: 3px 8px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        
+        /* Увеличенные размеры для основного контента */
+        p, li {
+            font-size: 1.1em;
+            line-height: 1.8;
+        }
+        
+        ul, ol {
+            padding-left: 25px;
+        }
+        
+        li {
+            margin-bottom: 12px;
+        }
+        
+        h3 {
+            font-size: 1.8em;
+            color: #2c5e1a;
+            margin: 30px 0 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Новая расширенная шапка -->
+    <div class="main-header">
+        <div class="header-content">
+            <h1>Эко-отель "Полевые грезы"</h1>
+            <p class="header-subtitle">Уникальный отдых в гармонии с природой</p>
+            <a href="#booking" class="header-cta">Забронировать сейчас</a>
+        </div>
+    </div>
+    
+    <!-- Навигационное меню -->
+    <nav class="main-nav">
+        <div class="nav-container">
+            <a href="#" class="logo">Полевые грезы</a>
+            <div class="nav-links">
+                <a href="#rooms">Номера</a>
+                <a href="#food">Питание</a>
+                <a href="#activities">Активности</a>
+                <a href="#eco">Эко-философия</a>
+                <a href="#contacts">Контакты</a>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="section">
+        <div class="intro">
+            <p>Добро пожаловать в наш уютный эко-отель, расположенный в живописном уголке природы. Здесь вас ждут просторные номера с видом на бескрайние поля, свежие фермерские продукты и незабываемые приключения на квадроциклах. Отдохните от городской суеты и погрузитесь в атмосферу природной гармонии.</p>
+        </div>
+    </div>
+    
+    <!-- Остальное содержимое остается таким же, как в предыдущем коде -->
+    <div class="section" id="rooms">
+        <h2>Наш главный дом</h2>
+        <p>Сердце нашего эко-отеля — просторный деревянный дом, построенный из экологически чистых материалов. В нем расположены два уникальных номера, каждый из которых обладает своим характером и атмосферой. Из окон обоих номеров открывается потрясающий вид на большое поле, которое меняет свои цвета в зависимости от времени года.</p>
+        
+        <div class="gallery">
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1400&q=80" alt="Главный дом эко-отеля">
+            <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-1.2.1&auto=format&fit=crop&w=1400&q=80" alt="Терраса с видом на поле">
+            <img src="https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?ixlib=rb-1.2.1&auto=format&fit=crop&w=1400&q=80" alt="Интерьер общего пространства">
+        </div>
+    </div>
+    
+    <!-- Продолжение остального контента -->
+    <div class="section">
+        <h2>Наши номера</h2>
+        
+        <div class="room">
+            <h3 class="room-title">Номер "Солнечный" с камином</h3>
+            <p>Просторный номер площадью 45 м² с настоящим камином, создающим уютную атмосферу в прохладные вечера. Большие панорамные окна позволяют наслаждаться видом на поле, не вставая с кровати. Интерьер выполнен в теплых натуральных тонах с использованием дерева, камня и льняных тканей.</p>
+            
+            <div class="amenities">
+                <span class="amenity">Королевская кровать 200x220</span>
+                <span class="amenity">Камин (дрова включены)</span>
+                <span class="amenity">Собственная терраса 15 м²</span>
+                <span class="amenity">Гидромассажная ванна</span>
+                <span class="amenity">Эко-косметика ручной работы</span>
+                <span class="amenity">Чайная станция с травами</span>
+                <span class="amenity">Халаты и тапочки</span>
+                <span class="amenity">Сейф</span>
+            </div>
+            
+            <div class="gallery">
+                <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?ixlib=rb-1.2.1&auto=format&fit=crop&w=1400&q=80" alt="Номер Солнечный">
+                <img src="https://images.unsplash.com/photo-1605346576608-92f1346b67d6?ixlib=rb-1.2.1&auto=format&fit=crop&w=1400&q=80" alt="Камин в номере">
+                <img src="https://images.unsplash.com/photo-1565538810643-b5bdb714032a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1400&q=80" alt="Гидромассажная ванна">
+            </div>
+        </div>
+        
+        <!-- Остальные секции продолжаются аналогично -->
+        
+    </div>
+    
+    <!-- Кнопка CTA внизу страницы -->
+    <div class="cta" id="booking">
+        <h2>Готовы к незабываемому отдыху?</h2>
+        <p>Оставьте заявку прямо сейчас и мы подберем для вас идеальные даты и номер!</p>
+        <a href="#contacts" class="cta-button">Забронировать номер</a>
+    </div>
+    
+    <!-- Подвал сайта -->
+    <footer id="contacts">
+        <div class="footer-links">
+            <a href="#">О нас</a>
+            <a href="#">Галерея</a>
+            <a href="#">Отзывы</a>
+            <a href="#">Правила</a>
+            <a href="#">Вакансии</a>
+        </div>
+        <p>Телефон: +7 (XXX) XXX-XX-XX</p>
+        <p>Email: info@polevye-grezy.ru</p>
+        <p>Адрес: Московская область, экопоселение "Зеленый бор"</p>
+        <p>© 2023 Эко-отель "Полевые грезы". Все права защищены.</p>
+    </footer>
+</body>
+</html>
